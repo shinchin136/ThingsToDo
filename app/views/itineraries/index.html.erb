@@ -1,0 +1,10 @@
+<h1>List of User's Itineraries</h1>
+
+<ul>
+  <% @itineraries.each do |itinerary| %>
+    <li> <%= itinerary.start_date %> <%= itinerary.end_date %> <%= link_to "#{itinerary.city} #{itinerary.country}", itinerary%>
+    </li>
+  <% end %>
+<ul>
+
+<%= link_to "Create new itinerary", new_itinerary_path %>
