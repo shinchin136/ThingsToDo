@@ -9,7 +9,6 @@ class CreateItineraries < ActiveRecord::Migration
 
       t.text :description
       t.references :user, index: true, foreign_key: true
-      t.references :destination, index: true, foreign_key: true
 
       t.timestamps null: false
     end
