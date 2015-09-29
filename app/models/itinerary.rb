@@ -2,6 +2,8 @@ class Itinerary < ActiveRecord::Base
   belongs_to :user
   has_many :events
 
+  validates :start_date, :end_date, :city, :country, presence: true
+
   after_create :fetch_events
 
   def fetch_events

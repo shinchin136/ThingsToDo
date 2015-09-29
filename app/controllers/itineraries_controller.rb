@@ -29,4 +29,8 @@ class ItinerariesController < ApplicationController
     params.require(:itinerary).permit(:start_date, :end_date, :city, :country)
   end
 
+  def flash_first_error(itinerary)
+    flash[:error] = itinerary.errors.first
+  end
+
 end
